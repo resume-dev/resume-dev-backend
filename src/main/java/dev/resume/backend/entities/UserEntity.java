@@ -2,6 +2,7 @@ package dev.resume.backend.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 
@@ -15,7 +16,7 @@ import java.util.UUID;
 public class UserEntity {
 
     @Id
-    @GeneratedValue(generator = "UUID")
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String name;
